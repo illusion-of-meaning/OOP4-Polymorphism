@@ -1,6 +1,8 @@
 package com.asherbakov.transport;
 
-public class Bus extends Transport{
+import com.asherbakov.interfaces.Compating;
+
+public class Bus extends Transport implements Compating {
 
     public Bus(String brand, String model, double engineVolume) {
         super(brand, model, engineVolume);
@@ -14,5 +16,20 @@ public class Bus extends Transport{
     @Override
     protected void stopMoving() {
 
+    }
+
+    @Override
+    public void pitStop() {
+        System.out.println("Автобус на пит-стопе");
+    }
+
+    @Override
+    public void bestTime() {
+        System.out.println("Лучшее время для автобуса - 5:20");
+    }
+
+    @Override
+    public void maximumSpeed() {
+        System.out.println("Максимальная скорость автобуса: 105 км/ч");
     }
 }
