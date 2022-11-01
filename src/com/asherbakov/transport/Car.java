@@ -32,4 +32,9 @@ public class Car extends Transport implements Compating {
     public void maximumSpeed() {
         System.out.println("Максимальная скорость легкового автомобиля: 180 км/ч");
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s", super.getBrand(), super.getModel());
+    }
 }
