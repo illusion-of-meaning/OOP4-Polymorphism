@@ -9,6 +9,8 @@ import com.asherbakov.transport.Car;
 import com.asherbakov.transport.Train;
 import com.asherbakov.transport.Transport;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         // === ДЗ 1 ===
@@ -34,20 +36,20 @@ public class Main {
         vladislav.race(car3);
 
         System.out.println("\nГруппа категории C:");
-        Driver<Train> maxim = new DriverCategoryC<Train>("Максим", 7);
-        maxim.race((Train) train1);
-        Driver<Train> oxana = new DriverCategoryC<Train>("Оксана", 8);
+        DriverCategoryC<Train> maxim = new DriverCategoryC<Train>("Максим", 7);
+        maxim.race(train1);
+        DriverCategoryC<Train> oxana = new DriverCategoryC<Train>("Оксана", 8);
         oxana.race(null);
-        Driver<Train> ilya = new DriverCategoryC<Train>("Илья", 9);
-        ilya.race((Train) train3);
+        DriverCategoryC<Train> ilya = new DriverCategoryC<Train>("Илья", 9);
+        ilya.race(train3);
 
         System.out.println("\nГруппа категории D:");
-        Driver<Bus> semen = new DriverCategoryD<Bus>("Семен", 7);
-        semen.race((Bus) bus1);
-        Driver<Bus> irina = new DriverCategoryD<Bus>("Ирина", 8);
-        irina.race((Bus) bus2);
-        Driver<Bus> alexandr = new DriverCategoryD<Bus>("Александр", 9);
-        alexandr.race((Bus) bus3);
+        DriverCategoryD<Bus> semen = new DriverCategoryD<Bus>("Семен", 7);
+        semen.race(bus1);
+        DriverCategoryD<Bus> irina = new DriverCategoryD<Bus>("Ирина", 8);
+        irina.race(bus2);
+        DriverCategoryD<Bus> alexandr = new DriverCategoryD<Bus>("Александр", 9);
+        alexandr.race(bus3);
 
     }
 }
