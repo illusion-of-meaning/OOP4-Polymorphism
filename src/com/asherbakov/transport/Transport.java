@@ -34,6 +34,7 @@ public abstract class Transport {
     }
 
     protected abstract void startMoving();
+
     protected abstract void stopMoving();
 
 }

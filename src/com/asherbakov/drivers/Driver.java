@@ -3,7 +3,7 @@ package com.asherbakov.drivers;
 import com.asherbakov.transport.Transport;
 import com.asherbakov.transport.enums.RightsCategory;
 
-public class Driver {
+public class Driver<T extends Transport> {
     final String NO_NAME = "Водитель пожелал остаться неизвестным";
     private String fullName;
     private RightsCategory rightsCategory;
@@ -31,9 +31,9 @@ public class Driver {
     }
 
 
-//    public void race(T transport) {
-//        System.out.println(String.format("Водитель %s управляет автомобилем '%s' и будет участвовать в заезде.", getFullName(), transport.toString()));
-//    }
+    public void race(T transport) {
+        System.out.println(String.format("Водитель %s управляет автомобилем '%s' и будет участвовать в заезде.", getFullName(), transport.toString()));
+    }
 
     public String getFullName() {
         return fullName;

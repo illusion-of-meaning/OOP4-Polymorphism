@@ -1,5 +1,6 @@
 package com.asherbakov;
 
+import com.asherbakov.drivers.Driver;
 import com.asherbakov.drivers.DriverCategoryB;
 import com.asherbakov.drivers.DriverCategoryC;
 import com.asherbakov.drivers.DriverCategoryD;
@@ -25,27 +26,27 @@ public class Main {
 
         // === ДЗ 4 ===
         System.out.println("Группа категории B:");
-        DriverCategoryB<Car> anton = new DriverCategoryB<>("Антон", 5);
+        Driver<Car> anton = new DriverCategoryB("Антон", 5);
         anton.race((Car) car1);
-        DriverCategoryB<Car> nikolay = new DriverCategoryB<>("Николай", 8);
+        Driver<Car> nikolay = new DriverCategoryB("Николай", 8);
         nikolay.race((Car) car2);
-        DriverCategoryB<Car> vladislav = new DriverCategoryB<>("Владислав", 6);
+        Driver<Car> vladislav = new DriverCategoryB("Владислав", 6);
         vladislav.race((Car) car3);
 
         System.out.println("\nГруппа категории C:");
-        DriverCategoryC<Train> maxim = new DriverCategoryC<>("Максим", 7);
+        Driver<Train> maxim = new DriverCategoryC("Максим", 7);
         maxim.race((Train) train1);
-        DriverCategoryC<Train> oxana = new DriverCategoryC<>("Оксана", 8);
+        Driver<Train> oxana = new DriverCategoryC("Оксана", 8);
         oxana.race((Train) train2);
-        DriverCategoryC<Train> ilya = new DriverCategoryC<>("Илья", 9);
+        Driver<Train> ilya = new DriverCategoryC("Илья", 9);
         ilya.race((Train) train3);
 
         System.out.println("\nГруппа категории D:");
-        DriverCategoryD<Bus> semen = new DriverCategoryD<>("Семен", 7);
+        Driver<Bus> semen = new DriverCategoryD("Семен", 7);
         semen.race((Bus) bus1);
-        DriverCategoryD<Bus> irina = new DriverCategoryD<>("Ирина", 8);
+        Driver<Bus> irina = new DriverCategoryD("Ирина", 8);
         irina.race((Bus) bus2);
-        DriverCategoryD<Bus> alexandr = new DriverCategoryD<>("Александр", 9);
+        Driver<Bus> alexandr = new DriverCategoryD("Александр", 9);
         alexandr.race((Bus) bus3);
 
     }
