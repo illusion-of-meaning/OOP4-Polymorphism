@@ -5,6 +5,7 @@ import com.asherbakov.transport.enums.RightsCategory;
 
 public class Driver<T extends Transport> {
     final String NO_NAME = "Водитель пожелал остаться неизвестным";
+    final String NO_TRANSPORT = "Водитель решил пройтись";
     private String fullName;
     private RightsCategory rightsCategory;
     private int experience;
@@ -30,9 +31,12 @@ public class Driver<T extends Transport> {
         System.out.println("Заправить автомобиль");
     }
 
-
     public void race(T transport) {
-        System.out.println(String.format("Водитель %s управляет автомобилем '%s' и будет участвовать в заезде.", getFullName(), transport.toString()));
+        if (transport != null) {
+            System.out.println(String.format("Водитель %s управляет автомобилем '%s' и будет участвовать в заезде.", getFullName(), transport.toString()));
+        } else {
+            System.out.println(String.format("Водитель %s управляет автомобилем '%s' и будет участвовать в заезде.", getFullName(), NO_TRANSPORT));
+        }
     }
 
     public String getFullName() {

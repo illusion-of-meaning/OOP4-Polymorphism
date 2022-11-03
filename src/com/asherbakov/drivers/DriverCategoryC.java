@@ -1,6 +1,8 @@
 package com.asherbakov.drivers;
 
-public class DriverCategoryC extends Driver {
+import com.asherbakov.transport.Train;
+
+public class DriverCategoryC<T extends Train> extends Driver {
 
     public DriverCategoryC(String fullName, int experience) {
         super(fullName, experience);
